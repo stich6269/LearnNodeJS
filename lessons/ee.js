@@ -13,7 +13,7 @@
  server.emit('request', {from: 'client'});
  server. emit('request', {from: 'another client'});*/
 
-//console.log(server.listeners('request') );
+//console.log(lessons.listeners('request') );
 
 var EventEmitter = require('events').EventEmitter,
     db = new EventEmitter;

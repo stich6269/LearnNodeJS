@@ -1,15 +1,15 @@
-var User = require('./user');
+var http = require('http'),
+    server  = new http.Server(),
+    emit = server.emit;
 
-function run() {
-    var petya = new User.user('Petya'),
-        vasya = new User.user('Vasya');
+server.listen(8080, '127.0.0.1');
+server.emit = function(event){
+    console.log(event);
+    emit.apply(server, arguments)
+};
 
-    petya.hello(vasya);
-}
 
-
-if(module.parent){
-    exports.run = run;
-}else {
-    run()
-}
+var counter = 0;
+server.on('request', function(req, res){
+    res.end('Hello world ' + ++counter);
+});
