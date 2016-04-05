@@ -1,0 +1,16 @@
+{
+  "name":"Learn_node.js",
+  "description":"Test project for learn node js",
+  "version":"0.0.2",
+  "author":{
+    "name": "Artem Polishchuk",
+    "email": "stich6269@yandex.ru"
+  },
+  "dependencies":{
+    "winston": "2.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/stich6269/LearnNodeJS"
+  }
+}

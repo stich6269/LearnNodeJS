@@ -1,5 +1,6 @@
 var http = require('http'),
-    url = require('url');
+    url = require('url'),
+    console = require('loger')(module);
 
 http.createServer(function(req, res){
     var parsedUrl = url.parse(req.url, true),
@@ -7,7 +8,6 @@ http.createServer(function(req, res){
         data = parsedUrl.query;
 
     data.method = req.method;
-    console.log(link);
 
     if(link == '/'){
         res.statusCode = 200;
@@ -16,6 +16,9 @@ http.createServer(function(req, res){
         res.statusCode = 404;
         res.end('Page not defined')
     }
-
-    console.log(req);
+    
 }).listen(3000);
+
+console.info('Some info data');
+console.debug('Some debug data');
+console.error('Some error data');
