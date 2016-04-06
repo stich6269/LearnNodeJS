@@ -7,7 +7,8 @@
     "email": "stich6269@yandex.ru"
   },
   "dependencies":{
-    "winston": "2.2.0"
+    "winston": "2.2.0",
+    "mime": "*"
   },
   "repository": {
     "type": "git",
